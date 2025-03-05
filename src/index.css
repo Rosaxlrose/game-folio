@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@font-face {
+  font-family: "Pretendo";
+  src:
+    url("fonts/pretendo.woff2") format("woff2"),
+    url("fonts/pretendo.woff") format("woff"),
+    url("fonts/pretendo.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  src:
+    url("fonts/lato.woff2") format("woff2"),
+    url("fonts/lato.woff") format("woff"),
+    url("fonts/lato.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RetroGaming";
+  src:
+    url("fonts/retro-gaming.woff2") format("woff2"),
+    url("fonts/retro-gaming.woff") format("woff"),
+    url("fonts/retro-gaming.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'RetroGaming';
+  src: url('https://cdn.jsdelivr.net/npm/retro-font@1.0.0/Retro%20Gaming.ttf') format('truetype');
+}
+
+:root {
+  --gameboy-color: #D3D8CF;
+  --screen-color: #4E9A06;
+}
+
+body {
+  margin: 0;
+  background: #225;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'VT323', monospace;
+  background: #ECE6c2 ;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+}
+
+.corner {
+  border-radius: 0.8rem 0.8rem 5rem 0.8rem;
+}
+
+.corner-rounded-top {
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.corner-rounded-bottom {
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.corner-rounded-left {
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.corner-rounded-right {
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.shadow-inset-left {
+  box-shadow: inset 0.1rem 0 0.1rem 0 #4d4d4d;
+}
+
+.shadow-inset-top {
+  box-shadow: inset 0 0.1rem 0.1rem 0 #4d4d4d;
+}
+
+#Gameboy {
+  position: relative;
+  width: 35.9rem;
+  height: 59.2rem;
+  background-color: var(--gameboy-color);
+  box-shadow: inset 1rem 0.1rem 1rem rgba(105, 105, 105, 0.5),
+    inset -1rem -0.1rem 1rem 0 rgba(255, 255, 255, 0.5);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.header__corner {
+  width: 2.8rem;
+  height: 3rem;
+}
+
+.header__corner--left {
+  border-radius: 0.8rem 0 0 0;
+}
+
+.header__corner--right {
+  border-radius: 0 0.8rem 0 0;
+}
+
+.header__inter {
+  background-color: #BCBFB8;
+  width: 0.4rem;
+}
+
+.header__large {
+  flex-grow: 1;
+  height: 3rem;
+}
+
+.header-foot {
+  height: 0.4rem;
+  background-color: #BCBFB8;
+  margin-bottom: 2rem;
+}
+
+#screen-border {
+  margin: 0 auto;
+  width: 31.6rem;
+  background-color: #6b6d69;
+  padding: 2rem;
+}
+
+#screen-border__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.lisere {
+  flex-grow: 1;
+  height: 0.2rem;
+  background-color: #2c2c2c;
+}
+
+.lisere--small {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #2c2c2c;
+}
+
+.scrbdr-hdr-text {
+  margin: 0 1rem;
+  font-size: 0.8rem;
+  color: #2c2c2c;
+}
+
+.power-light {
+  position: absolute;
+  left: 1.8rem;
+  top: 8.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: #ff0000;
+  box-shadow: 0 0 0.5rem #ff0000;
+}
+
+#screen {
+  width: 100%;
+  height: 17.2rem;
+  background-color: var(--screen-color);
+  border: 0.3rem solid #243205;
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+.screen-content {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.screen-content::-webkit-scrollbar {
+  display: none;
+}
+
+.ngbText {
+  text-align: center;
+  margin: 2rem 0;
+  color: #0a2f7e;
+  letter-spacing: 0.1rem;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.brand-model {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+
+.trademark {
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.2rem;
+  margin-top: 2rem;
+}
+
+.direction {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem;
+  width: 9.3rem;
+  height: 9.3rem;
+}
+
+.direction__element {
+  background-color: #1a1a1a;
+}
+
+.direction__element--blank {
+  background: none;
+}
+
+.direction__element--arrow {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.direction__element--arrow:active {
+  transform: scale(0.95);
+}
+
+.direction__element__center {
+  width: 75%;
+  height: 75%;
+  margin: 12.5%;
+  background-color: #2c2c2c;
+  border-radius: 50%;
+}
+
+.AB {
+  transform: rotate(-25deg);
+}
+
+.AB__btn {
+  display: flex;
+  gap: 2rem;
+  padding: 0.6rem;
+  border-radius: 2.5rem;
+  box-shadow: inset 0.3rem 0.6rem 1rem 0.5rem #BCBFB8;
+}
+
+.AB__btn__btn {
+  width: 4rem;
+  height: 4rem;
+  background-color: #AB1B1B;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: inset -0.2rem -0.2rem 0.3rem rgba(0, 0, 0, 0.3),
+    inset 0.2rem 0.2rem 0.3rem rgba(255, 255, 255, 0.1);
+}
+
+.AB__btn__btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.AB__btn-label {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.select-start {
+  position: absolute;
+  bottom: 12rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(-25deg);
+  display: flex;
+  gap: 2rem;
+}
+
+.select-start__btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-menu {
+  width: 4rem;
+  height: 1.2rem;
+  background-color: #2c2c2c;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.btn-menu:active {
+  transform: scale(0.95);
+  background-color: #1a1a1a;
+}
+
+.label {
+  font-size: 1rem;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.soundPart {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  transform: rotate(-25deg);
+}
+
+.soundPart__hole {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #2c2c2c;
+  border-radius: 0.1rem;
+}
+
+.angle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--gameboy-color);
+  border-radius: 0 0 5rem 0;
+}
+
+.gameboy {
+  background: #eee;
+  padding: 20px 40px 50px 40px;
+  border-radius: 10px 10px 60px 10px;
+  box-shadow: 
+    -5px 0 #999,
+    0 5px #999,
+    5px 0 #999,
+    0 -5px #999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.screen-container {
+  background: #777;
+  padding: 20px 35px 35px 20px;
+  border-radius: 10px 10px 30px 10px;
+  box-shadow: inset 0 0 10px #000a;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.ab-buttons {
+  display: flex;
+  gap: 20px;
+  transform: rotate(-25deg);
+}
+
+.option-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.speaker {
+  margin-top: 20px;
+}
